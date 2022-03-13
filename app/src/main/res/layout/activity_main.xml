@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:background="#333333">
+
+    <SearchView
+        android:id="@+id/searchView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:queryHint="Search a movie.."
+        android:iconifiedByDefault="false"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/searchview_bg"
+        android:inputType="textNoSuggestions"/>
+
+        <ProgressBar
+            android:id="@+id/loading"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            />
+    <TextView
+        android:id="@+id/notFoundText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:text="Could not found the movie." />
+
+    <ListView
+        android:id="@+id/movieList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:listitem="@layout/movie_listview_items"
+        android:layout_marginVertical="10dp"
+        android:divider="@null"
+        android:dividerHeight="0dp"/>
+
+</LinearLayout>
